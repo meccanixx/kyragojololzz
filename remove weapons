@@ -1,0 +1,20 @@
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+
+local AK = character:FindFirstChild("#KATANAWEAPON")
+local AS = character:FindFirstChild("Sheathe")
+local NK = character:FindFirstChild("#NinjaKATANA")
+local NS = character:FindFirstChild("Sheathed")
+local MBW = character:FindFirstChild("#BATWEAPON")
+if AK and AS then
+    AK:Destroy()
+    AS:Destroy()
+end
+if NK and NS then
+    NK:Destroy()
+    NS:Destroy()
+end
+if MBW then
+MBW:Destroy()
+end
